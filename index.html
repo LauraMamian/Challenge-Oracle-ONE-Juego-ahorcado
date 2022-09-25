@@ -7,18 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <main>
+    <div class="container">
         <nav>
-            <ul>
-                <li><a href="game.html">Iniciar juego</a></li>
-                <li><a href="palabras.html"> Agregar nueva palabra</a></li>
-            </ul>
+            <img class="logo" src="logo.svg" alt="logo_aula">
         </nav>
-    </main>
+
+        <div class="page-container">
+            <div class="main-section">
+                <div class="section-buttons mb-64">
+                    <button id="encriptar" class="btn btn-primary mb-24" type="button"
+                        onclick="location.href='game.html'">
+                        Iniciar juego
+                    </button>
+
+                    <button id="desencriptar" class="btn btn-secondary" type="button"
+                        onclick="location.href='palabras.html'">
+                        Agregar nueva palabra
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            Laura Andrea Mamián Cerón
+        </footer>
+    </div>
     <script src="js/index.js"></script>
 </body>
 
