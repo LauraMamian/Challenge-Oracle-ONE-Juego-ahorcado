@@ -31,7 +31,7 @@ Este proyecto consiste adivinar una palabra antes de que se complete la imagen a
 
 <p align="center">
 <img
-  src="img/5.jpg"
+  src="img/5.png"
   width="250"
   height="250">
 </p>
