@@ -27,7 +27,7 @@ Puedes usar extensiones de **Visual Studio Code** como `Live Server` para correr
 
 ## 📖 Descripción 
 
-Este proyecto consiste adivinar una palabra antes de que se complete la imagen a los **5 intentos**.
+Este proyecto consiste adivinar una palabra antes de que se complete la imagen a los **5 intentos**. Las líneas indicarán la cantidad de letras que tiene la palabra seleccionada aleatoriamente, además, no será posible ingresar números o caracteres especiales. ¡Que comience el juego! 
 
 <p align="center">
 <img
