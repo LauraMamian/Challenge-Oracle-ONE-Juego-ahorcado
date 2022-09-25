@@ -29,7 +29,7 @@ Puedes usar extensiones de **Visual Studio Code** como `Live Server` para correr
 
 Este proyecto consiste adivinar una palabra antes de que se complete la imagen a los **5 intentos**.
 
-![Imagen de referencia](../Challenge-Oracle-ONE-Juego-ahorcado/img/5.jpg)
+![Imagen de referencia](img/5.jpg)
 
 ## 📝 Requisitos 
 
