@@ -33,7 +33,7 @@ Este proyecto consiste adivinar una palabra antes de que se complete la imagen a
   src="img/5.jpg"
   alt="Alt text"
   title=""
-  style="display: flex; margin: 0 auto; max-width: 350px">
+  style="display: flex; margin: 0 auto; max-width: 250px">
 
 ## 📝 Requisitos 
 
