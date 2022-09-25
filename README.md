@@ -31,9 +31,9 @@ Este proyecto consiste adivinar una palabra antes de que se complete la imagen a
 
 <img
   src="img/5.jpg"
-  alt="Alt text"
-  title=""
-  style="display: flex; margin: 0 auto; max-width: 250px">
+  width="250"
+  height="250"
+  style="display: flex; margin: 0 auto">
 
 ## 📝 Requisitos 
 
