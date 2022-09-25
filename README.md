@@ -29,11 +29,12 @@ Puedes usar extensiones de **Visual Studio Code** como `Live Server` para correr
 
 Este proyecto consiste adivinar una palabra antes de que se complete la imagen a los **5 intentos**.
 
+<p align="center">
 <img
   src="img/5.jpg"
   width="250"
-  height="250"
-  style="display: flex; margin: 0 auto">
+  height="250">
+</p>
 
 ## 📝 Requisitos 
 
