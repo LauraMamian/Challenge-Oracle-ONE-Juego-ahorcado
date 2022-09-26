@@ -100,12 +100,40 @@ nav .logo {
     width: 32px;
 }
 
+textarea {
+    resize: none;
+    margin-top: 10px;
+    font: var(--primary-font);
+    color: var(--dark-blue-300);
+    background: none;
+    text-transform: lowercase;
+    min-height: 250px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+textarea::placeholder {
+    text-transform: initial;
+    font: var(--primary-font);
+    color: var(--dark-blue-300);
+}
+
 .page-container {
     width: 100%;
 }
 
 .main-section {
     width: 100%;
+}
+
+.page-container .main-index {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15rem 0 3.5rem 0;
 }
 
 .section-warning {
@@ -191,6 +219,17 @@ nav .logo {
 
 footer {
     font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    margin-left: 0 0.2rem;
+    color: var(--shadow);
+    text-decoration: none;
+
 }
 
 @media (min-width:600px) and (max-width:999px) {
