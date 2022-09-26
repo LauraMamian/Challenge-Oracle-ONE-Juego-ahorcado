@@ -217,6 +217,55 @@ textarea::placeholder {
     border-radius: 100px;
 }
 
+/* game.html */
+
+.page-container .main-game {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.imagen img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.palabra-secreta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.4em;
+    margin: 1rem auto;
+}
+
+.letras {
+    width: 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--dark-blue-300);
+    color: var(--dark-blue-200);
+    padding: 2px;
+    margin: 0 0.2rem;
+}
+
+.teclado,
+.categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+.teclas button {
+    width: 30px;
+    height: 30px;
+    margin: 0.3rem 0.05rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
 footer {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
