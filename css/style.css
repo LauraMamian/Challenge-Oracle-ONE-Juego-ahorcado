@@ -107,7 +107,7 @@ textarea {
     color: var(--dark-blue-300);
     background: none;
     text-transform: lowercase;
-    min-height: 250px;
+    min-height: 80px;
     width: 100%;
     outline: none;
     border: none;
@@ -133,7 +133,7 @@ textarea::placeholder {
 
 .page-container .main-index {
     width: 100%;
-    margin: 15rem 0 3.5rem 0;
+    margin: 15rem 0 2rem 0;
 }
 
 .section-warning {
@@ -232,57 +232,72 @@ footer a {
 
 }
 
+/* Tablet */
+
 @media (min-width:600px) and (max-width:999px) {
-    .section-buttons {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .section-buttons .btn {
-        margin: 0;
-        width: 48%;
-    }
-}
-
-@media (min-width:1000px) {
     textarea {
-        min-height: 380px;
+        min-height: 100px;
     }
 
     .section-buttons {
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        width: 100%;
     }
 
     .section-buttons .btn {
-        margin: 10rem 0;
-        width: 48%;
+        margin: 0.2rem;
+        margin-top: 1rem;
+        width: 50%;
+        font-size: 13px;
     }
 
-    .page-container {
+    .page-container .main-index {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        margin-top: 8rem;
     }
 
     .main-section {
-        width: 65%;
+        width: 80%;
+    }
+
+    footer {
+        margin-top: 6rem;
+    }
+}
+
+/* Computers */
+
+@media (min-width:1000px) {
+    textarea {
+        min-height: 120px;
+    }
+
+    .section-buttons {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .section-buttons .btn {
+        margin: 1rem;
+        width: 50%;
+    }
+
+    footer {
+        margin-top: 5rem;
+    }
+
+    .page-container .main-index {
+        margin: 10rem 0 3rem 0;
+    }
+
+    .main-section {
+        width: 80%;
     }
 
     .section-buttons {
         margin-bottom: 0;
-    }
-
-    .section-result {
-        justify-content: space-between;
-        width: 28%;
-        margin-bottom: 0;
-    }
-
-    .section-result img {
-        display: block;
-        width: 250px;
     }
 }
