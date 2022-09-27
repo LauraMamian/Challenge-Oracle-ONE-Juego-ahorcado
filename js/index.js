@@ -1,55 +1,56 @@
 let palabraSecretaCategoria;
 let palabraSecretaAleatoria;
+let lista = [];
 
 /* lista de palabras */
 
 const palabras = [
     p1 = {
-        palabra: "COLOMBIA",
+        nombre: "COLOMBIA",
         categoria: "País",
     },
     p2 = {
-        palabra: "MEXICO",
+        nombre: "MEXICO",
         categoria: "País",
     },
     p3 = {
-        palabra: "PERU",
+        nombre: "PERU",
         categoria: "País",
     },
     p4 = {
-        palabra: "TREN",
+        nombre: "TREN",
         categoria: "Transporte",
     },
     p5 = {
-        palabra: "AVION",
+        nombre: "AVION",
         categoria: "Transporte",
     },
     p6 = {
-        palabra: "CARRO",
+        nombre: "CARRO",
         categoria: "Transporte",
     },
     p7 = {
-        palabra: "PIZZA",
+        nombre: "PIZZA",
         categoria: "Comida",
     },
     p8 = {
-        palabra: "PASTA",
+        nombre: "PASTA",
         categoria: "Comida",
     },
     p9 = {
-        palabra: "HELADO",
+        nombre: "HELADO",
         categoria: "Comida",
     },
     p10 = {
-        palabra: "MANILLA",
+        nombre: "MANILLA",
         categoria: "Objeto",
     },
     p11 = {
-        palabra: "LAPIZ",
+        nombre: "LAPIZ",
         categoria: "Objeto",
     },
     p12 = {
-        palabra: "CELULAR",
+        nombre: "CELULAR",
         categoria: "Objeto",
     },
 ]
@@ -57,7 +58,7 @@ const palabras = [
 function crearPalabraSecreta() {
     const listaPalabras = parseInt(Math.random() * palabras.length);
 
-    palabraSecretaAleatoria = palabras[listaPalabras].palabra;
+    palabraSecretaAleatoria = palabras[listaPalabras].nombre;
     palabraSecretaCategoria = palabras[listaPalabras].categoria;
 
     console.log(palabraSecretaAleatoria);
@@ -65,3 +66,23 @@ function crearPalabraSecreta() {
 }
 
 crearPalabraSecreta();
+
+
+function mostrarpalabra() {
+    const categoria = document.getElementById("categoria");
+    categoria.innerHTML = palabraSecretaCategoria;
+
+    const palabraSecreta = document.getElementById("palabra-secreta");
+    palabraSecreta.innerHTML = " ";
+
+    for (i = 0; i < palabraSecretaAleatoria.length; i++) {
+        if (lista[i] == undefined) {
+            lista[i] = "_";
+            palabraSecreta.innerHTML = palabraSecreta.innerHTML + "<div class='letras'>" + lista[i] + "</div>";
+        } else {
+            palabraSecreta.innerHTML = palabraSecreta.innerHTML + "<div class='letras'>" + lista[i] + "</div>";
+        }
+    }
+}
+
+mostrarpalabra();
