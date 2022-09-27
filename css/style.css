@@ -296,7 +296,7 @@ footer a {
     }
 
     .imagen img {
-        width: 80%;
+        width: 75%;
         margin: 0 auto;
     }
 
@@ -361,6 +361,7 @@ footer a {
         width: 52px;
         height: 52px;
         margin: 0.4rem;
+        font-size: 1.2em;
     }
 
     .section-buttons {
