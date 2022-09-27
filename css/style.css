@@ -185,38 +185,6 @@ textarea::placeholder {
     width: 100%;
 }
 
-.section-result {
-    box-shadow: var(--shadow);
-    padding: 32px;
-    border-radius: 32px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    background-color: var(--white);
-}
-
-.section-result .title {
-    font: var(--bold-font);
-}
-
-.section-result .result {
-    height: 100%;
-    max-height: 350px;
-    font: var(--secondary-font);
-    text-align: center;
-    overflow-y: scroll;
-
-}
-
-.section-result .result::-webkit-scrollbar-track {
-    background-color: white;
-    border-radius: 100px;
-}
-
 /* game.html */
 
 .page-container .main-game {
@@ -225,8 +193,11 @@ textarea::placeholder {
 }
 
 .imagen img {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .palabra-secreta {
@@ -264,6 +235,19 @@ textarea::placeholder {
     box-shadow: var(--shadow);
     cursor: pointer;
     border-radius: 0.2rem;
+    border: 1px solid var(--dark-blue-200);
+    color: var(--dark-blue-500);
+    font-weight: 550;
+    font-family: 'Inter', sans-serif;
+}
+
+.teclas button:hover {
+    transform: scale(1.2);
+}
+
+.categoria {
+    font-size: 1.3em;
+    color: var(--dark-blue-500);
 }
 
 footer {
@@ -278,7 +262,6 @@ footer a {
     margin-left: 0 0.2rem;
     color: var(--shadow);
     text-decoration: none;
-
 }
 
 /* Tablet */
@@ -307,12 +290,28 @@ footer a {
         margin-top: 8rem;
     }
 
-    .main-section {
+    .main-section,
+    .page-container .main-game {
         width: 80%;
     }
 
-    footer {
-        margin-top: 6rem;
+    .imagen img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .palabra-secreta {
+        font-size: 1.8em;
+    }
+
+    .letras {
+        width: 24px;
+    }
+
+    .teclas button {
+        width: 40px;
+        height: 40px;
+        margin: 0.3rem 0.05rem;
     }
 }
 
@@ -334,16 +333,34 @@ footer a {
         width: 50%;
     }
 
-    footer {
-        margin-top: 5rem;
-    }
-
     .page-container .main-index {
         margin: 10rem 0 3rem 0;
     }
 
-    .main-section {
+    .main-section,
+    .page-container .main-game {
         width: 80%;
+        margin: 0 auto;
+    }
+
+    .imagen img {
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    .palabra-secreta {
+        margin: 1rem auto;
+        font-size: 2em;
+    }
+
+    .letras {
+        width: 30px;
+    }
+
+    .teclas button {
+        width: 52px;
+        height: 52px;
+        margin: 0.4rem;
     }
 
     .section-buttons {
