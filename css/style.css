@@ -193,7 +193,7 @@ textarea::placeholder {
 }
 
 .imagen img {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -296,7 +296,7 @@ footer a {
     }
 
     .imagen img {
-        width: 75%;
+        width: 65%;
         margin: 0 auto;
     }
 

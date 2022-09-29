@@ -1,3 +1,4 @@
+let intentos = 5;
 let palabraSecretaCategoria;
 let palabraSecretaAleatoria;
 let lista = [];
@@ -65,9 +66,6 @@ function crearPalabraSecreta() {
     console.log(palabraSecretaCategoria);
 }
 
-crearPalabraSecreta();
-
-
 function mostrarpalabra() {
     const categoria = document.getElementById("categoria");
     categoria.innerHTML = palabraSecretaCategoria;
@@ -85,4 +83,59 @@ function mostrarpalabra() {
     }
 }
 
+function verificarLetra(letra) {
+    if (intentos > 0) {
+        colorLetraSeleccionada("tecla-" + letra);
+        compararLetra(letra);
+    }
+}
+
+function colorLetraSeleccionada(tecla) {
+    document.getElementById(tecla).style.background = "#B40008";
+    document.getElementById(tecla).style.color = "#FFFFFF";
+    document.getElementById(tecla).setAttribute("onclick", ";");
+}
+
+function compararLetra(letra) {
+    let letraEncontrada = false;
+    for (i = 0; i < palabraSecretaAleatoria.length; i++) {
+        if (letra == palabraSecretaAleatoria.charAt(i)) {
+            lista[i] = letra;
+            letraEncontrada = true;
+        }
+    }
+    if (letraEncontrada == true) {
+        mostrarpalabra();
+    } else {
+        intentos--;
+        console.log(intentos);
+        mostrarImagen();
+    }
+}
+
+function mostrarImagen() {
+    switch (intentos) {
+        case 4:
+            document.getElementById("imagen").src = "./img/1.png";
+            break;
+        case 3:
+            document.getElementById("imagen").src = "./img/2.png";
+            break;
+        case 2:
+            document.getElementById("imagen").src = "./img/3.png";
+            break;
+        case 1:
+            document.getElementById("imagen").src = "./img/4.png";
+            break;
+        case 0:
+            document.getElementById("imagen").src = "./img/5.png";
+            break;
+        default:
+            document.getElementById("imagen").src = "./img/0.png";
+            break;
+    }
+}
+
+
+crearPalabraSecreta();
 mostrarpalabra();
