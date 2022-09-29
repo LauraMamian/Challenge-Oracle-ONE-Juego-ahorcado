@@ -49,6 +49,8 @@
     background-color: var(--dark-blue-300);
 }
 
+/* Cellphone - Iphone SE */
+
 body {
     width: 100%;
     display: flex;
@@ -321,7 +323,7 @@ footer a {
     }
 }
 
-/* Computers */
+/* Computer */
 
 @media (min-width:1000px) {
     textarea {
