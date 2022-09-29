@@ -230,8 +230,8 @@ textarea::placeholder {
 }
 
 .teclas button {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     margin: 0.3rem 0.05rem;
     box-shadow: var(--shadow);
     cursor: pointer;
