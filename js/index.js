@@ -2,6 +2,7 @@ let intentos = 5;
 let palabraSecretaCategoria;
 let palabraSecretaAleatoria;
 let lista = [];
+let palabraEncontrada = [];
 
 /* lista de palabras */
 
@@ -84,32 +85,45 @@ function mostrarpalabra() {
 }
 
 function verificarLetra(letra) {
+    document.getElementById("tecla-" + letra).disabled = true;
     if (intentos > 0) {
-        colorLetraSeleccionada("tecla-" + letra);
         compararLetra(letra);
+        colorLetraSeleccionada("tecla-" + letra);
     }
 }
 
 function colorLetraSeleccionada(tecla) {
-    document.getElementById(tecla).style.background = "#B40008";
-    document.getElementById(tecla).style.color = "#FFFFFF";
+    document.getElementById(tecla).style.background = "#ced4da";
+    document.getElementById(tecla).style.color = "#052051";
     document.getElementById(tecla).setAttribute("onclick", ";");
 }
 
 function compararLetra(letra) {
     let letraEncontrada = false;
+    let palabraFinal;
+
     for (i = 0; i < palabraSecretaAleatoria.length; i++) {
         if (letra == palabraSecretaAleatoria.charAt(i)) {
             lista[i] = letra;
             letraEncontrada = true;
+            palabraEncontrada[i] = palabraSecretaAleatoria.charAt(i);
+            palabraFinal = palabraEncontrada.join("");
+            console.log(palabraEncontrada);
+            console.log(palabraFinal);
         }
     }
     if (letraEncontrada == true) {
         mostrarpalabra();
     } else {
         intentos--;
+        if (intentos <= 0) {
+            mostrarModal("La palabra era: " + palabraSecretaAleatoria);
+        }
         console.log(intentos);
         mostrarImagen();
+    }
+    if (palabraFinal == palabraSecretaAleatoria) {
+        mostrarModal("Felicidades, ¡has ganado!");
     }
 }
 
@@ -136,6 +150,26 @@ function mostrarImagen() {
     }
 }
 
+function mostrarModal(mensaje) {
+    let modalBody = document.getElementById("modal-body");
+    modalBody.innerHTML = mensaje;
+
+    let repetir = document.getElementById("repetir");
+    repetir.onclick = function () {
+        location.reload();
+    };
+
+    $('#myModal').modal({
+        show: true
+    });
+}
+
+function cambiarPalabra() {
+    let cambio = document.getElementById("cambiar-palabra");
+    cambio.onclick = function () {
+        location.reload();
+    }
+}
 
 crearPalabraSecreta();
 mostrarpalabra();

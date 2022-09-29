@@ -245,6 +245,11 @@ textarea::placeholder {
     transform: scale(1.2);
 }
 
+
+.teclas button:disabled {
+    cursor: not-allowed;
+}
+
 .categoria {
     font-size: 1.3em;
     color: var(--dark-blue-500);
