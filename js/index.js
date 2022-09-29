@@ -3,59 +3,64 @@ let palabraSecretaCategoria;
 let palabraSecretaAleatoria;
 let lista = [];
 let palabraEncontrada = [];
+let palabras = [];
 
 /* lista de palabras */
 
-const palabras = [
-    {
-        nombre: "COLOMBIA",
-        categoria: "País",
-    },
-    {
-        nombre: "MEXICO",
-        categoria: "País",
-    },
-    {
-        nombre: "PERU",
-        categoria: "País",
-    },
-    {
-        nombre: "TREN",
-        categoria: "Transporte",
-    },
-    {
-        nombre: "AVION",
-        categoria: "Transporte",
-    },
-    {
-        nombre: "CARRO",
-        categoria: "Transporte",
-    },
-    {
-        nombre: "PIZZA",
-        categoria: "Comida",
-    },
-    {
-        nombre: "PASTA",
-        categoria: "Comida",
-    },
-    {
-        nombre: "HELADO",
-        categoria: "Comida",
-    },
-    {
-        nombre: "MANILLA",
-        categoria: "Objeto",
-    },
-    {
-        nombre: "LAPIZ",
-        categoria: "Objeto",
-    },
-    {
-        nombre: "CELULAR",
-        categoria: "Objeto",
-    },
-]
+if (localStorage.getItem("palabras") != null) {
+    palabras = JSON.parse(localStorage.getItem("palabras"));
+} else {
+    palabras = [
+        {
+            nombre: "COLOMBIA",
+            categoria: "País",
+        },
+        {
+            nombre: "MEXICO",
+            categoria: "País",
+        },
+        {
+            nombre: "PERU",
+            categoria: "País",
+        },
+        {
+            nombre: "TREN",
+            categoria: "Transporte",
+        },
+        {
+            nombre: "AVION",
+            categoria: "Transporte",
+        },
+        {
+            nombre: "CARRO",
+            categoria: "Transporte",
+        },
+        {
+            nombre: "PIZZA",
+            categoria: "Comida",
+        },
+        {
+            nombre: "PASTA",
+            categoria: "Comida",
+        },
+        {
+            nombre: "HELADO",
+            categoria: "Comida",
+        },
+        {
+            nombre: "MANILLA",
+            categoria: "Objeto",
+        },
+        {
+            nombre: "LAPIZ",
+            categoria: "Objeto",
+        },
+        {
+            nombre: "CELULAR",
+            categoria: "Objeto",
+        },
+    ]
+}
 
 function crearPalabraSecreta() {
     const listaPalabras = parseInt(Math.random() * palabras.length);
@@ -68,8 +73,8 @@ function agregarPalabra() {
     let nombre = document.getElementById("texto-nombre").value;
     let categoria = document.getElementById("texto-categoria").value;
     palabras.push({ nombre: nombre.toUpperCase(), categoria: categoria });
+    localStorage.setItem("palabras", JSON.stringify(palabras));
     location.href = "juego.html";
-    console.log(palabras);
 }
 
 function mostrarpalabra() {
@@ -93,14 +98,19 @@ function verificarLetra(letra) {
     document.getElementById("tecla-" + letra).disabled = true;
     if (intentos > 0) {
         compararLetra(letra);
-        colorLetraSeleccionada("tecla-" + letra);
     }
 }
 
-function colorLetraSeleccionada(tecla) {
-    document.getElementById(tecla).style.background = "#ced4da";
-    document.getElementById(tecla).style.color = "#052051";
-    document.getElementById(tecla).setAttribute("onclick", ";");
+function colorLetraSeleccionada(letra, estado) {
+    if (estado == true) {
+        document.getElementById("tecla-" + letra).style.background = "#00B52E";
+        document.getElementById("tecla-" + letra).style.color = "#FFFFFF";
+        document.getElementById("tecla-" + letra).setAttribute("onclick", ";");
+    } else {
+        document.getElementById("tecla-" + letra).style.background = "#B40008";
+        document.getElementById("tecla-" + letra).style.color = "#FFFFFF";
+        document.getElementById("tecla-" + letra).setAttribute("onclick", ";");
+    }
 }
 
 function compararLetra(letra) {
@@ -115,6 +125,9 @@ function compararLetra(letra) {
             palabraFinal = palabraEncontrada.join("");
         }
     }
+
+    colorLetraSeleccionada(letra, letraEncontrada);
+
     if (letraEncontrada == true) {
         mostrarpalabra();
     } else {
@@ -122,7 +135,6 @@ function compararLetra(letra) {
         if (intentos <= 0) {
             mostrarModal("La palabra era: " + palabraSecretaAleatoria);
         }
-        console.log(intentos);
         mostrarImagen();
     }
     if (palabraFinal == palabraSecretaAleatoria) {
