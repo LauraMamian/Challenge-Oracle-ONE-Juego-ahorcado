@@ -19,16 +19,25 @@
         <div class="page-container">
             <div class="main-section">
 
-                <textarea id="texto-entrada" placeholder="Ingrese una palabra "></textarea>
+                <textarea onkeypress="return (event.charCode >= 97 && event.charCode <= 122)" maxlength="8"
+                    id="texto-nombre" placeholder="Ingrese una palabra"></textarea>
 
                 <div class="section-warning mb-16">
                     <img class="logo" src="icons/warning.svg" alt="">
-                    <p> Máximo 8 letras. </p>
+                    <p id="maximo"> Máximo 8 letras. </p>
+                </div>
+
+                <textarea onkeypress="return (event.charCode >= 97 && event.charCode <= 122)" id="texto-categoria"
+                    placeholder="Escriba la categoría"></textarea>
+
+                <div class="section-warning mb-16">
+                    <img class="logo" src="icons/warning.svg" alt="">
+                    <p id="maximo"> No use números ni caracteres especiales. </p>
                 </div>
 
                 <div class="section-buttons mb-64">
                     <button id="guardar" class="btn btn-primary mb-24" type="button"
-                        onclick="location.href='juego.html'">
+                        onclick="agregarPalabra()">
                         Guardar y empezar
                     </button>
 

@@ -107,10 +107,11 @@ textarea {
     color: var(--dark-blue-300);
     background: none;
     text-transform: lowercase;
-    min-height: 80px;
+    min-height: 50px;
     width: 100%;
     outline: none;
     border: none;
+    text-transform: capitalize;
 }
 
 textarea::placeholder {
@@ -273,7 +274,7 @@ footer a {
 
 @media (min-width:600px) and (max-width:999px) {
     textarea {
-        min-height: 100px;
+        min-height: 60px;
     }
 
     .section-buttons {
@@ -324,7 +325,7 @@ footer a {
 
 @media (min-width:1000px) {
     textarea {
-        min-height: 120px;
+        min-height: 80px;
     }
 
     .section-buttons {

@@ -7,51 +7,51 @@ let palabraEncontrada = [];
 /* lista de palabras */
 
 const palabras = [
-    p1 = {
+    {
         nombre: "COLOMBIA",
         categoria: "País",
     },
-    p2 = {
+    {
         nombre: "MEXICO",
         categoria: "País",
     },
-    p3 = {
+    {
         nombre: "PERU",
         categoria: "País",
     },
-    p4 = {
+    {
         nombre: "TREN",
         categoria: "Transporte",
     },
-    p5 = {
+    {
         nombre: "AVION",
         categoria: "Transporte",
     },
-    p6 = {
+    {
         nombre: "CARRO",
         categoria: "Transporte",
     },
-    p7 = {
+    {
         nombre: "PIZZA",
         categoria: "Comida",
     },
-    p8 = {
+    {
         nombre: "PASTA",
         categoria: "Comida",
     },
-    p9 = {
+    {
         nombre: "HELADO",
         categoria: "Comida",
     },
-    p10 = {
+    {
         nombre: "MANILLA",
         categoria: "Objeto",
     },
-    p11 = {
+    {
         nombre: "LAPIZ",
         categoria: "Objeto",
     },
-    p12 = {
+    {
         nombre: "CELULAR",
         categoria: "Objeto",
     },
@@ -62,9 +62,14 @@ function crearPalabraSecreta() {
 
     palabraSecretaAleatoria = palabras[listaPalabras].nombre;
     palabraSecretaCategoria = palabras[listaPalabras].categoria;
+}
 
-    console.log(palabraSecretaAleatoria);
-    console.log(palabraSecretaCategoria);
+function agregarPalabra() {
+    let nombre = document.getElementById("texto-nombre").value;
+    let categoria = document.getElementById("texto-categoria").value;
+    palabras.push({ nombre: nombre.toUpperCase(), categoria: categoria });
+    location.href = "juego.html";
+    console.log(palabras);
 }
 
 function mostrarpalabra() {
@@ -108,8 +113,6 @@ function compararLetra(letra) {
             letraEncontrada = true;
             palabraEncontrada[i] = palabraSecretaAleatoria.charAt(i);
             palabraFinal = palabraEncontrada.join("");
-            console.log(palabraEncontrada);
-            console.log(palabraFinal);
         }
     }
     if (letraEncontrada == true) {
