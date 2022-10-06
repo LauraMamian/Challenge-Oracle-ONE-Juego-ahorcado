@@ -59,6 +59,18 @@ if (localStorage.getItem("palabras") != null) {
             nombre: "CELULAR",
             categoria: "Objeto",
         },
+        {
+            nombre: "PERRO",
+            categoria: "Animal",
+        },
+        {
+            nombre: "GATO",
+            categoria: "Animal",
+        },
+        {
+            nombre: "CABALLO",
+            categoria: "Animal",
+        }
     ]
 }
 
