@@ -138,7 +138,7 @@ function compararLetra(letra) {
         mostrarImagen();
     }
     if (palabraFinal == palabraSecretaAleatoria) {
-        mostrarModal("Felicidades, ¡has ganado!");
+        mostrarModal("Ganaste, ¡Felicidades!");
     }
 }
 
