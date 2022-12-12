@@ -99,9 +99,9 @@ function mostrarpalabra() {
     for (i = 0; i < palabraSecretaAleatoria.length; i++) {
         if (lista[i] == undefined) {
             lista[i] = "_";
-            palabraSecreta.innerText = palabraSecreta.innerText + "<div class='letras'>" + lista[i] + "</div>";
+            palabraSecreta.innerText = palabraSecreta.innerHTML + "<div class='letras'>" + lista[i] + "</div>";
         } else {
-            palabraSecreta.innerText = palabraSecreta.innerText + "<div class='letras'>" + lista[i] + "</div>";
+            palabraSecreta.innerText = palabraSecreta.innerHTML + "<div class='letras'>" + lista[i] + "</div>";
         }
     }
 }
