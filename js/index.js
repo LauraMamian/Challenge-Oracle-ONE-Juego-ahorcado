@@ -94,14 +94,14 @@ function mostrarpalabra() {
     categoria.document.palabraSecreta = palabraSecretaCategoria;
 
     const palabraSecreta = document.getElementById("palabra-secreta");
-    palabraSecreta.document = " ";
+    palabraSecreta.document.v = " ";
 
     for (i = 0; i < palabraSecretaAleatoria.length; i++) {
         if (lista[i] == undefined) {
             lista[i] = "_";
-            palabraSecreta.document = palabraSecreta.document + "<div class='letras'>" + lista[i] + "</div>";
+            palabraSecreta.document.v = palabraSecreta.document.v + "<div class='letras'>" + lista[i] + "</div>";
         } else {
-            palabraSecreta.document = palabraSecreta.document + "<div class='letras'>" + lista[i] + "</div>";
+            palabraSecreta.document.v = palabraSecreta.document.v + "<div class='letras'>" + lista[i] + "</div>";
         }
     }
 }
