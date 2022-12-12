@@ -91,10 +91,10 @@ function agregarPalabra() {
 
 function mostrarpalabra() {
     const categoria = document.getElementById("categoria");
-    categoria.innerHTML = palabraSecretaCategoria;
+    categoria.document.palabraSecreta = palabraSecretaCategoria;
 
     const palabraSecreta = document.getElementById("palabra-secreta");
-    palabraSecreta.innerHTML = " ";
+    palabraSecreta.document.vacio = " ";
 
     for (i = 0; i < palabraSecretaAleatoria.length; i++) {
         if (lista[i] == undefined) {
