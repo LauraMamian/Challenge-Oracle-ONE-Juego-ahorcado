@@ -91,17 +91,17 @@ function agregarPalabra() {
 
 function mostrarpalabra() {
     const categoria = document.getElementById("categoria");
-    categoria.innerHTML = palabraSecretaCategoria;
+    categoria.innerText = palabraSecretaCategoria;
 
     const palabraSecreta = document.getElementById("palabra-secreta");
-    palabraSecreta.innerHTML = " ";
+    palabraSecreta.innerText = " ";
 
     for (i = 0; i < palabraSecretaAleatoria.length; i++) {
         if (lista[i] == undefined) {
             lista[i] = "_";
-            palabraSecreta.innerHTML = palabraSecreta.innerHTML + "<div class='letras'>" + lista[i] + "</div>";
+            palabraSecreta.innerText = palabraSecreta.innerText + "<div class='letras'>" + lista[i] + "</div>";
         } else {
-            palabraSecreta.innerHTML = palabraSecreta.innerHTML + "<div class='letras'>" + lista[i] + "</div>";
+            palabraSecreta.innerText = palabraSecreta.innerText + "<div class='letras'>" + lista[i] + "</div>";
         }
     }
 }
@@ -179,7 +179,7 @@ function mostrarImagen() {
 
 function mostrarModal(mensaje) {
     let modalBody = document.getElementById("modal-body");
-    modalBody.innerHTML = mensaje;
+    modalBody.innerText = mensaje;
 
     let repetir = document.getElementById("repetir");
     repetir.onclick = function () {
