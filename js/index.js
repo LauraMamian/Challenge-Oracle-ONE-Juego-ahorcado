@@ -179,7 +179,7 @@ function mostrarImagen() {
 
 function mostrarModal(mensaje) {
     let modalBody = document.getElementById("modal-body");
-    modalBody.innerHTML = mensaje;
+    modalBody.document.mensaje = mensaje;
 
     let repetir = document.getElementById("repetir");
     repetir.onclick = function () {
