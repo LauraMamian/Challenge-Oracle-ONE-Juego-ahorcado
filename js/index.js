@@ -91,17 +91,17 @@ function agregarPalabra() {
 
 function mostrarpalabra() {
     const categoria = document.getElementById("categoria");
-    categoria.innerHTML = escapeHTML(palabraSecretaCategoria);
+    categoria.textContent = palabraSecretaCategoria;
 
     const palabraSecreta = document.getElementById("palabra-secreta");
-    palabraSecreta.innerHTML = escapeHTML(" ");
+    palabraSecreta.textContent = " ";
 
     for (i = 0; i < palabraSecretaAleatoria.length; i++) {
         if (lista[i] == undefined) {
             lista[i] = "_";
-            palabraSecreta.innerHTML = palabraSecreta.innerHTML + "<div class='letras'>" + lista[i] + "</div>";
+            palabraSecreta.textContent = palabraSecreta.textContent + "<div class='letras'>" + lista[i] + "</div>";
         } else {
-            palabraSecreta.innerHTML = palabraSecreta.innerHTML + "<div class='letras'>" + lista[i] + "</div>";
+            palabraSecreta.textContent = palabraSecreta.textContent + "<div class='letras'>" + lista[i] + "</div>";
         }
     }
 }
@@ -179,7 +179,7 @@ function mostrarImagen() {
 
 function mostrarModal(mensaje) {
     let modalBody = document.getElementById("modal-body");
-    modalBody.innerHTML = escapeHTML(mensaje);
+    modalBody.textContent = escapeHTML(mensaje);
 
     let repetir = document.getElementById("repetir");
     repetir.onclick = function () {
@@ -196,16 +196,6 @@ function cambiarPalabra() {
     cambio.onclick = function () {
         location.reload();
     }
-}
-
-function escapeHTML(unsafe_str) {
-    return unsafe_str
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/\"/g, '&quot;')
-        .replace(/\'/g, '&#39;')
-        .replace(/\//g, '&#x2F;')
 }
 
 crearPalabraSecreta();
