@@ -94,7 +94,7 @@ function mostrarpalabra() {
     categoria.innerText = palabraSecretaCategoria;
 
     const palabraSecreta = document.getElementById("palabra-secreta");
-    palabraSecreta.innerText = " ";
+    palabraSecreta.innerHTML = " ";
 
     for (i = 0; i < palabraSecretaAleatoria.length; i++) {
         if (lista[i] == undefined) {
