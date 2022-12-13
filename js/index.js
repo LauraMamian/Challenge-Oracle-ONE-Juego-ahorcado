@@ -91,10 +91,10 @@ function agregarPalabra() {
 
 function mostrarpalabra() {
     const categoria = document.getElementById("categoria");
-    categoria.innerHTML = palabraSecretaCategoria;
+    categoria.innerHTML = escapeHTML(palabraSecretaCategoria);
 
     const palabraSecreta = document.getElementById("palabra-secreta");
-    palabraSecreta.innerHTML = " ";
+    palabraSecreta.innerHTML = escapeHTML(" ");
 
     for (i = 0; i < palabraSecretaAleatoria.length; i++) {
         if (lista[i] == undefined) {
@@ -179,7 +179,7 @@ function mostrarImagen() {
 
 function mostrarModal(mensaje) {
     let modalBody = document.getElementById("modal-body");
-    modalBody.innerHTML = mensaje;
+    modalBody.innerHTML = escapeHTML(mensaje);
 
     let repetir = document.getElementById("repetir");
     repetir.onclick = function () {
@@ -196,6 +196,16 @@ function cambiarPalabra() {
     cambio.onclick = function () {
         location.reload();
     }
+}
+
+function escapeHTML(unsafe_str) {
+    return unsafe_str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\"/g, '&quot;')
+        .replace(/\'/g, '&#39;')
+        .replace(/\//g, '&#x2F;')
 }
 
 crearPalabraSecreta();
