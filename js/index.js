@@ -91,7 +91,7 @@ function agregarPalabra() {
 
 function mostrarpalabra() {
     const categoria = document.getElementById("categoria");
-    categoria.textContent = palabraSecretaCategoria;
+    categoria.innerText = palabraSecretaCategoria;
 
     const palabraSecreta = document.getElementById("palabra-secreta");
     palabraSecreta.innerHTML = escapeHTML(" ");
